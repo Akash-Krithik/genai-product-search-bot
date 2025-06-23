@@ -1,16 +1,13 @@
 # requirements.txt
 
-# Final, stable configuration for Streamlit Cloud deployment
+# Final, stable configuration using FAISS
 streamlit
 pandas
-# Pinning a specific version of pysqlite3-binary to fix the chromadb RuntimeError
-pysqlite3-binary==0.4.6
-langchain==0.1.14
-langchain-community==0.0.30
-# Pinning chromadb and protobuf to versions compatible with each other
-chromadb==0.4.13
-protobuf==3.20.3
-langchain-chroma
+langchain>=0.2.0,<0.3.0
+langchain-community>=0.2.0,<0.3.0
+langchain-text-splitters>=0.2.0,<0.3.0
+# Replace chromadb with faiss-cpu
+faiss-cpu
 transformers
 torch
 scikit-learn

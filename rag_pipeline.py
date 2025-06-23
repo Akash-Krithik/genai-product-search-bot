@@ -3,17 +3,14 @@
 from transformers import pipeline
 from vectorstore import get_vectorstore
 
-# Load retriever and model
 retriever = get_vectorstore().as_retriever()
 llm = pipeline("text2text-generation", model="google/flan-t5-base")
 
 def get_answer(query):
-    # Get relevant documents
-    # REVERT THIS: Use the old method
-    docs = retriever.get_relevant_documents(query)
+    # Use the modern .invoke() method
+    docs = retriever.invoke(query)
     context = "\n".join([doc.page_content for doc in docs])
-
-    # ... The rest of the function stays the same ...
+    
     prompt = f"""You are a helpful assistant. Use the context below to answer the user's question.
 
 Context:
