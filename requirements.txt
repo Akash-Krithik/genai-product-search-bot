@@ -2,9 +2,10 @@ streamlit
 pandas
 langchain==0.1.14
 langchain-community==0.0.30
-chromadb==0.4.22
+chromadb==0.4.15
 langchain-chroma
 transformers
 torch
 scikit-learn
 sentence-transformers
+protobuf==3.20.3
