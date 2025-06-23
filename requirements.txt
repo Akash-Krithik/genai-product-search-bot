@@ -1,7 +1,7 @@
 streamlit
 pandas
 langchain==0.1.14
-langchain-community==0.0.26
+langchain-community==0.0.30
 chromadb==0.4.22
 langchain-chroma
 transformers
