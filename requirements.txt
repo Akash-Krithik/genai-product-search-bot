@@ -1,10 +1,16 @@
+# Core app dependencies
 streamlit
 pandas
+scikit-learn
+transformers
+torch
+sentence-transformers
+
+# RAG + Vector Store
 langchain==0.1.14
 langchain-community==0.0.26
 chromadb==0.4.22
-langchain-chroma
-transformers
-torch
-scikit-learn
-sentence-transformers
+
+# Fix compatibility issues
+protobuf==3.20.3
+opentelemetry-exporter-otlp-proto-grpc==1.21.0
