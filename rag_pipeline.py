@@ -11,6 +11,7 @@ def get_answer(query):
     context = "\n".join([doc.page_content for doc in docs])
 
     # Construct flexible, dynamic prompt
+    
     prompt = f"""You are a helpful assistant. Use the context below to answer the user's question.
 
 Context:
