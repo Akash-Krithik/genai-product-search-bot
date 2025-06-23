@@ -7,3 +7,4 @@ torch
 scikit-learn
 sentence-transformers
 protobuf==3.20.3
+tqdm
