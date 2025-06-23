@@ -3,3 +3,4 @@ __pycache__/
 db/
 .env
 *.ipynb_checkpoints
+faiss_index
