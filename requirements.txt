@@ -1,6 +1,8 @@
 streamlit
+pandas
 langchain
 chromadb
-sentence-transformers
 transformers
-pymupdf
+torch
+scikit-learn
+sentence-transformers
