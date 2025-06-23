@@ -1,3 +1,5 @@
+# rag_pipeline.py
+
 from transformers import pipeline
 from vectorstore import get_vectorstore
 
@@ -7,7 +9,8 @@ llm = pipeline("text2text-generation", model="google/flan-t5-base")
 
 def get_answer(query):
     # Get relevant documents
-    docs = retriever.get_relevant_documents(query)
+    # UPDATED: Use .invoke() instead of .get_relevant_documents()
+    docs = retriever.invoke(query)
     context = "\n".join([doc.page_content for doc in docs])
 
     # Construct flexible, dynamic prompt

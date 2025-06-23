@@ -2,8 +2,10 @@
 
 import os
 import pandas as pd
-from langchain.schema import Document
-from langchain.text_splitter import CharacterTextSplitter
+# UPDATED: Import Document from langchain_core
+from langchain_core.documents import Document
+# UPDATED: Import CharacterTextSplitter from its new package
+from langchain_text_splitters import CharacterTextSplitter
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import HuggingFaceEmbeddings
 
