@@ -9,12 +9,11 @@ llm = pipeline("text2text-generation", model="google/flan-t5-base")
 
 def get_answer(query):
     # Get relevant documents
-    # UPDATED: Use .invoke() instead of .get_relevant_documents()
-    docs = retriever.invoke(query)
+    # REVERT THIS: Use the old method
+    docs = retriever.get_relevant_documents(query)
     context = "\n".join([doc.page_content for doc in docs])
 
-    # Construct flexible, dynamic prompt
-    
+    # ... The rest of the function stays the same ...
     prompt = f"""You are a helpful assistant. Use the context below to answer the user's question.
 
 Context:
@@ -23,6 +22,5 @@ Context:
 Question: {query}
 Answer:"""
 
-    # Run the model
     response = llm(prompt, max_length=256, do_sample=False)[0]['generated_text'].strip()
     return response, [doc.page_content for doc in docs]
