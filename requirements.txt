@@ -2,7 +2,8 @@ streamlit
 pandas
 langchain==0.1.14
 langchain-community==0.0.30
-chromadb==0.4.15
+# Downgrade chromadb to the last version without the AVX2 CPU requirement
+chromadb==0.4.13
 langchain-chroma
 transformers
 torch
